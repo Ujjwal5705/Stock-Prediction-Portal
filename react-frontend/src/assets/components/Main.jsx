@@ -13,7 +13,6 @@ const Main = () => {
             <Button text='Login' class='btn-outline-warning'/>
         </div>
     </div>
-    <Footer />
     </>
   )
 }
