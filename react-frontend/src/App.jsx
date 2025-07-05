@@ -7,8 +7,7 @@ import Header from "./assets/components/header";
 import Footer from "./assets/components/footer";
 import Login from "./assets/components/Login";
 import AuthProvider from "./AuthProvider";
-import Dashboard from "./assets/components/dashboard/Dashboard";
-
+import Dashboard from "./assets/components/Dashboard/Dashboard";
 
 function App() {
   return (
