@@ -2,26 +2,32 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
+    const [error, setError] = useState('')
+    const navigate = useNavigate()
 
     const handleLogin = async (e) => {
         e.preventDefault()
-        // setLoading(true)
+        setLoading(true)
         const userData = {
             username, password
         }
 
         try{
             const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
-            // const response2 = await axios.post('http://127.0.0.1:8000/api/v1/token/refresh', response.data.access)
-            console.log(response.data)
+            localStorage.setItem('accessToken', response.data.access)
+            localStorage.setItem('refreshToken', response.data.refresh)
+            console.log('Logged In Successfully')
+            navigate('/')
         }catch(error){
-            console.log('Invalid Credential')
+            setError('Invalid Credentials')
+        }finally{
+            setLoading(false)
         }
     }
 
@@ -31,6 +37,7 @@ const Login = () => {
                 <div className='col-md-5 justify-content-center bg-light-dark p-5 shadow rounded mb-5'>
                     <div className="mb-3">
                         <h2 className='text-center text-light'>Login to our portal</h2>
+                        {error && <div className="alert alert-danger">{error}</div> }
                     </div>
                     <form className='text-center' onSubmit={handleLogin}>
                         <div className='mb-3'>
