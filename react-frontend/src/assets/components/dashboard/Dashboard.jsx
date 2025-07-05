@@ -8,7 +8,6 @@ const Dashboard = () => {
         const fetchProtectedData = async () => {
             try{
                 const response = await axiosInstance.get('/protected-view/')
-                console.log(response)
                 setData(response.data.status)
             }catch(error){
                 console.log(error)
