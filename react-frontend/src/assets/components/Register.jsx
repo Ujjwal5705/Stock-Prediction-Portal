@@ -6,6 +6,7 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [errors, setError] = useState('')
+    const [success, setSuccess] = useState('')
 
     const handleRegistration = async (e) => {
         e.preventDefault()
@@ -16,18 +17,23 @@ const Register = () => {
 
         try{
             const response = await axios.post('http://127.0.0.1:8000/api/v1/register/', userData)
-            console.log('Registration Succesfull')
+            console.log('Registration Succesful')
             console.log(response.data)
+            setSuccess('Registration Successful')
         }catch(error){
             setError(error.response.data)
             console.log('Registration Error: ', error.response.data)
+            setSuccess('')
         }
     }
   return (
     <>
     <div className='d-flex justify-content-center align-items-center mb-5'>
             <div className='col-md-5 justify-content-center bg-light-dark p-5 shadow rounded'>
-                <h2 className='mb-3 text-center text-light'>Create An Account</h2>
+                <div className="mb-3">
+                    <h2 className='text-center text-light'>Create An Account</h2>
+                    <big className='text-success'>{success && <div className="alert alert-success">{success}</div> }</big>
+                </div>
                 <form className='text-center' onSubmit={handleRegistration}>
                     <div className='mb-3'>
                         <input type="text" className='form-control' placeholder='Enter Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
