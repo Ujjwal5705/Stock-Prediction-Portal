@@ -7,6 +7,7 @@ import Header from "./assets/components/header";
 import Footer from "./assets/components/footer";
 import Login from "./assets/components/Login";
 import AuthProvider from "./AuthProvider";
+import Dashboard from "./assets/components/dashboard/Dashboard";
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
           <Header />
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="register/" element={<Register />} />
-              <Route path="login/" element={<Login />}/>
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />}/>
+              <Route path="/dashboard" element={<Dashboard/>}/>
             </Routes>
           <Footer />
         </BrowserRouter>
