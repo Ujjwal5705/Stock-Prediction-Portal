@@ -89,7 +89,14 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 - A Real life example is Human brain. During rainy season, whenever their is a cloud formation, the images of the those clouds are captured by human eyes and fed to the brain as input data. That input data is then processed via hidden layers of the neural network of our brain and based upon the past events and patterns, our brain assumes that it is likely to experience a rainfall.
 
 ### Types of Deep Learning Neural Networks
-- FeedForward neural networks (FNNs)
-- Recurrent neural networks (RNNs)
-- Convolutional neural networks (CNNs)
-- Other NN architectures
+- **FeedForward neural networks (FNNs) :-** In this neural network, data moves only in one direction i.e. the direction of flow of data doesn't matter. It has no memory. Example: Image Recognition.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/C1hsPXJR/Screenshot-2025-07-07-at-5-43-33-PM.png" height="200" width="300"><img/>
+</p>
+
+- **Recurrent neural networks (RNNs) :-** RNNs are such type of neural networks in which sequence of data flow matters. It is more sophisticated version of FNNs. Stock market data is time-series i.e. a particular event is tagged with a time and that flow of data matters.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/cCgW3Dpz/Screenshot-2025-07-07-at-6-02-24-PM.png" height="200" width="300"><img/>
+</p>
