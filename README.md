@@ -11,7 +11,6 @@ The application predicts future stock prices by analyzing:
 
 These are key technical indicators widely used by traders and financial analysts to make informed investment decisions.
 
-
 ## Technologies Used
 
 - **Python**
@@ -95,8 +94,10 @@ Regression is a type of machine learning in which the ultimate goal is to predic
   <img align="center" src="https://i.postimg.cc/C1hsPXJR/Screenshot-2025-07-07-at-5-43-33-PM.png" height="200" width="300"><img/>
 </p>
 
-- **Recurrent neural networks (RNNs) :-** RNNs are such type of neural networks in which sequence of data flow matters. It is more sophisticated version of FNNs. Stock market data is time-series i.e. a particular event is tagged with a time and that flow of data matters.
+- **Recurrent neural networks (RNNs) :-** RNNs are such type of neural networks in which sequence of data flow matters. It is more sophisticated version of FNNs and has built in short-term memory. Stock market data is time-series i.e. a particular event is tagged with a time and that flow of data matters.
 
 <p align="center">
   <img align="center" src="https://i.postimg.cc/cCgW3Dpz/Screenshot-2025-07-07-at-6-02-24-PM.png" height="200" width="300"><img/>
 </p>
+
+- **Convolutional neural networks (CNNs) :-** CNNs are mostly used for visual data like images and videos.
