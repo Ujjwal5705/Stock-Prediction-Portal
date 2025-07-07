@@ -86,4 +86,10 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 
 > A Simple neural network have only one hidden layer to process feature and patterns from input data. While, A Deep learning neural network have multiple layers.
 
-- A Real life example is Human brain. During rainy season, whenever their is a cloud formation, the images of the those clouds are captured by human eyes and fed to the brain as input data. That input data is then processed via hidden layers of the neural network of our brain and based upon the past events and patterns, our brain assumes that it is likely to experiance a rainfall.
+- A Real life example is Human brain. During rainy season, whenever their is a cloud formation, the images of the those clouds are captured by human eyes and fed to the brain as input data. That input data is then processed via hidden layers of the neural network of our brain and based upon the past events and patterns, our brain assumes that it is likely to experience a rainfall.
+
+### Types of Deep Learning Neural Networks
+- FeedForward neural networks (FNNs)
+- Recurrent neural networks (RNNs)
+- Convolutional neural networks (CNNs)
+- Other NN architectures
