@@ -9,6 +9,7 @@ import Login from "./assets/components/Login";
 import AuthProvider from "./AuthProvider";
 import Dashboard from "./assets/components/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
         <BrowserRouter>
           <Header />
             <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />}/>
+              <Route path="/" element={<PublicRoute><Main /></PublicRoute>} />
+              <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
+              <Route path="/login" element={<PublicRoute><Login /></PublicRoute>}/>
               <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
             </Routes>
           <Footer />
