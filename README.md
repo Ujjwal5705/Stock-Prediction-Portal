@@ -19,3 +19,7 @@ These are key technical indicators widely used by traders and financial analysts
 - **Keras** – Deep learning library
 - **LSTM** – Recurrent Neural Network (RNN) model for time series prediction
 - **NumPy**, **Pandas**, **Matplotlib** – Data manipulation and visualization
+
+---
+## What is Machine Learning ?
+- Machine Learning is subset of Artificial Intelligence in which computer learns to predict future events based on the past datasets. Its like teaching patterns to a machine and then it make predictions based on those patterns.
