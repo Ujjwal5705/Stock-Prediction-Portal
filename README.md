@@ -50,7 +50,17 @@ This is type of machine learning in which computer learns to make better decisio
 
 ---
 ## Classification
-Classification is a type of Supervised learning in which main focus is to predict a label or category based on input data but it has nothing to do with Stock price prediction so it's of no use for our project.
+Classification is a type of Supervised learning in which main focus is to predict a label or category based on input data.
 
 ## Regression
 Regression is a type of machine learning in which the ultimate goal is to predict continuous numerical values.
+
+# Understanding the Project
+- Stock prices change constantly and are influenced by the numerous factors from the past
+- Human Emotions can trigger changes in a stock price
+- Follows market trends (upwards and downwards)
+- ....many other complex factors
+
+> So, Classification has nothing to do with our problem resolution. Basic Regression can not produce output datasets considering above conditions. To solve this we introduced an extended version of regression, **LSTM (Long Short-Term Memory)** model. **LSTMs** are like regression with built-in memory.
+
+> LSTMs can remember and learn from the past events and can predict the stock price. **Stock market data is a Time Series data**. So, the LSTM are specifically designed for such type of data. Therefore, LSTM is the best fit for this project.
