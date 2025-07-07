@@ -64,3 +64,12 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 > So, Classification has nothing to do with our problem resolution. Basic Regression can not produce output datasets considering above conditions. To solve this we introduced an extended version of regression, **LSTM (Long Short-Term Memory)** model. **LSTMs** are like regression with built-in memory.
 
 > LSTMs can remember and learn from the past events and can predict the stock price. **Stock market data is a Time Series data**. So, the LSTM are specifically designed for such type of data. Therefore, LSTM is the best fit for this project.
+
+---
+
+<h3 align="center">Machine Learning vs. Deep Learning<h3/>
+
+| Machine Learning (ML)                                   | Deep Learning (DL)                                                    |
+|---------------------------------------------------------|-----------------------------------------------------------------------|
+| Collection of tools designed to perform simpler tasks.  | Subset of ML, use more complex Algorithm and neural networks.         |
+| Weather prediction, spam email classification etc.      | Sentiment Analysis, Image Recognition and Natural language Processing.|
