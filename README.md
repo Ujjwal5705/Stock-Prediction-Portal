@@ -73,3 +73,22 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 |---------------------------------------------------------|-----------------------------------------------------------------------|
 | Collection of tools designed to perform simpler tasks.  | Subset of ML, use more complex Algorithm and neural networks.         |
 | Weather prediction, spam email classification etc.      | Sentiment Analysis, Image Recognition and Natural language Processing.|
+
+
+
+### What is a Neural Network ?
+- It is a model which mimics Human brain, Networks are created to recognize patterns and make predictions.
+- Neural Network is a set of interconnected nodes (neurons) in which the data is fed to train the model which can travel throughout neighbouring nodes.
+
+[![Screenshot-2025-07-07-at-4-52-18-PM.png](https://i.postimg.cc/L8HxJqFd/Screenshot-2025-07-07-at-4-52-18-PM.png)](https://github.com/Ujjwal5705/Stock-Prediction-Portal/)
+
+### Neural Network Architecture
+> **Input layer:-** Feed data to neural network.
+
+> **Hidden layers:-** Process and Analyze the input data by extracting features and patterns.
+
+> **Output layer:-** Produce the final result, like a prediction or classification.
+
+> A Simple neural network have only one hidden layer to process feature and patterns from input data. While, A Deep learning neural network have multiple layers.
+
+- A Real life example is Human brain. During rainy season, whenever their is a cloud formation, the images of the those clouds are captured by human eyes and fed to the brain as input data. That input data is then processed via hidden layers of the neural network of our brain and based upon the past events and patterns, our brain assumes that it is likely to experiance a rainfall.
