@@ -10,3 +10,12 @@ The application predicts future stock prices by analyzing:
 - 📊 **200-day Moving Average**
 
 These are key technical indicators widely used by traders and financial analysts to make informed investment decisions.
+
+
+## Technologies Used
+
+- **Python**
+- **Django** – Backend framework
+- **Keras** – Deep learning library
+- **LSTM** – Recurrent Neural Network (RNN) model for time series prediction
+- **NumPy**, **Pandas**, **Matplotlib** – Data manipulation and visualization
