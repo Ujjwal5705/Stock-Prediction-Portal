@@ -30,14 +30,20 @@ These are key technical indicators widely used by traders and financial analysts
 - ### Supervised learning
 When we train a machine with correct input as well as output data is known as Supervised learning. It is like teaching a kid to label an animal as "Cat" while showing an actual Cat and asking that question again next day. Once, enough datasets are fed. Machine is given unknown inputs and based on it's past learning, an ouput is predicted.
 
-[![Screenshot-2025-07-07-at-1-35-20-PM.png](https://i.postimg.cc/NjrhpQtM/Screenshot-2025-07-07-at-1-35-20-PM.png)](https://postimg.cc/Xr3DvSpS)
+[![Screenshot-2025-07-07-at-1-35-20-PM.png](https://i.postimg.cc/NjrhpQtM/Screenshot-2025-07-07-at-1-35-20-PM.png)](https://github.com/Ujjwal5705/Stock-Prediction-Portal/)
 
 - ### Unsupervised learning
 This is a type of machine learning in which machine is fed with unlabelled data and recognise patterns/structures on its own. It is like givng a bunch of toys to a kid and he/she himself identifies and seperate Tigers, Cats, Dogs etc. based on their body sructure, eye shape, hairs and size. In real world this learning is more beneficial on industrial and institutional level. Banks can feed all the transactions to the model and identify the fraudulent activities.
 
-[![Screenshot-2025-07-07-at-1-38-10-PM.png](https://i.postimg.cc/CLgJWYb5/Screenshot-2025-07-07-at-1-38-10-PM.png)](https://postimg.cc/G9XkyW7n)
+[![Screenshot-2025-07-07-at-1-38-10-PM.png](https://i.postimg.cc/CLgJWYb5/Screenshot-2025-07-07-at-1-38-10-PM.png)]([https://postimg.cc/G9XkyW7n)](https://github.com/Ujjwal5705/Stock-Prediction-Portal/)
 
 - ### Reinforcement learning
 This is type of machine learning in which computer learns to make better decisions by recieving rewards or penalty for its actions. It's like Clapping for a kid when he/she stand up and stumbles on its own for the first time and discouraging activities like eating sand and breaking toys. This type of learning is mostly used in Self-Driving Cars.
 
-[![Screenshot-2025-07-07-at-1-44-36-PM.png](https://i.postimg.cc/DzpnMBDf/Screenshot-2025-07-07-at-1-44-36-PM.png)](https://postimg.cc/DWG9WdnR)
+[![Screenshot-2025-07-07-at-1-44-36-PM.png](https://i.postimg.cc/DzpnMBDf/Screenshot-2025-07-07-at-1-44-36-PM.png)](https://github.com/Ujjwal5705/Stock-Prediction-Portal/)
+
+---
+
+## Machine Learning LandScape
+
+[![machine-learning-landscape.png](https://i.postimg.cc/q7xjJF00/machine-learning-landscape.png)](https://github.com/Ujjwal5705/Stock-Prediction-Portal/)
