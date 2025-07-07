@@ -53,4 +53,4 @@ This is type of machine learning in which computer learns to make better decisio
 Classification is a type of Supervised learning in which main focus is to predict a label or category based on input data but it has nothing to do with Stock price prediction so it's of no use for our project.
 
 ## Regression
-Regression is a type of machine learning in which the ultimate goal is to predict continuous numerical value.
+Regression is a type of machine learning in which the ultimate goal is to predict continuous numerical values.
