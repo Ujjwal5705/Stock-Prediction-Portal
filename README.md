@@ -17,7 +17,7 @@ These are key technical indicators widely used by traders and financial analysts
 - **Django** – Backend framework
 - **Keras** – Deep learning library
 - **LSTM** – Recurrent Neural Network (RNN) model for time series prediction
-- **NumPy**, **Pandas**, **Matplotlib** – Data manipulation and visualization
+- **NumPy**, **Pandas**, **Matplotlib** - Pandas is a powerfull open-source library, used for Data Manipulation and and Analysis in python.
 
 ---
 ## What is Machine Learning ?
