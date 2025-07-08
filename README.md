@@ -103,5 +103,5 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 - **Convolutional neural networks (CNNs) :-** CNNs are mostly used for visual data like images and videos.
 
 
-> Note:- Their are two types of RNN. Vanilla RNN and LSTM RNN. The only difference between them is that LSTM model has super powerfull memory capability as compared to Vanilla.
-> It can remember very old the events and patterns of a stock that's why LSTM is the best fit for this project.
+> Note:- There are two types of RNN. Vanilla RNN and LSTM RNN. The only difference between them is that LSTM model has super powerfull memory capability as compared to Vanilla.
+> It can remember very old events and patterns of a stock, that's why LSTM is the best fit for this project.
