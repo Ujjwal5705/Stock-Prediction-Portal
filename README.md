@@ -19,6 +19,7 @@ These are key technical indicators widely used by traders and financial analysts
 - **LSTM** – Recurrent Neural Network (RNN) model for time series prediction
 - **Pandas** - Pandas is a powerfull open-source library, used for Data Manipulation and and Analysis in python.
 - **NumPy** - NumPy is a python library that can perform mathematical and statistical operations on large numerical data.
+- **Matplotlib** - Matplotlib is a python library, primarily designed to visualise data in the form of charts and plots. 
 
 ---
 ## What is Machine Learning ?
