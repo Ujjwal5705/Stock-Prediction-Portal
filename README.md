@@ -156,3 +156,14 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 <p align="center">
   <img align="center" src="https://i.postimg.cc/1XJDw2YS/Screenshot-2025-07-10-at-3-30-47-PM.png" height="300" width="400"><img/>
 </p>
+
+### Step 4: Data Preprocessing
+- Scaled down the training data between 0 and 1 using `sklearn`.
+- Scaling down data is essential in machine learning to bring all features to a similar range. Models like LSTM, SVM, and KNN are sensitive to feature magnitudes. Without scaling, larger values (e.g., stock prices or volume) can dominate smaller ones, causing biased learning and unstable training.
+
+Scaling improves:
+1. Training speed
+2. Model stability
+3. Fair contribution from each feature
+
+scaling helps the model learn more effectively and accurately.
