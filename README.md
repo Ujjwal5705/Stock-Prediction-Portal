@@ -23,7 +23,7 @@ These are key technical indicators widely used by traders and financial analysts
 
 ---
 
-> Important Disclaimer: Understanding Our Prediction Approach
+> Important Disclaimer: Understanding my Prediction Approach
 > In this stock prediction portal project, I'm predicting the previous 30% of the data against the test data of the previous 30%, not the next day, next week, or next month’s price, because stock price movements are highly unpredictable and influenced by countless external factors. The model is trained on historical data and aims to identify patterns from the past, which helps to evaluate its performance based on known data rather than making uncertain future predictions. This approach allows us to assess the accuracy of the model in a controlled environment without the risk of inaccurate future forecasts.
 
 ---
