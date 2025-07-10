@@ -167,3 +167,8 @@ Scaling improves:
 3. Fair contribution from each feature
 
 scaling helps the model learn more effectively and accurately.
+
+### Step 5: Sequence Creation
+- Created `x_train` and `y_train` arrays.
+- Stored sequences of 100 consecutive values from the `data_training_array` in `x_train`.
+- Stored the corresponding result prices in `y_train`.
