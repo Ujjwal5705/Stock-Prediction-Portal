@@ -14,12 +14,14 @@ These are key technical indicators widely used by traders and financial analysts
 ## Technologies Used
 
 - **Python**
-- **Django** – Backend framework
-- **Keras** – Deep learning library
-- **LSTM** – Recurrent Neural Network (RNN) model for time series prediction
+- **Django** – Backend framework.
+- **yfinance** - Python library that allows you to download historical market data from Yahoo Finance.
+- **Keras** – A high level API for building and training neural networks.
+- **LSTM** – Recurrent Neural Network (RNN) model for time series prediction.
 - **Pandas** - Pandas is a powerfull open-source library, used for Data Manipulation and and Analysis in python.
 - **NumPy** - NumPy is a python library that can perform mathematical and statistical operations on large numerical data.
-- **Matplotlib** - Matplotlib is a python library, primarily designed to visualise data in the form of charts and plots. 
+- **Matplotlib** - Matplotlib is a python library, primarily designed to visualise data in the form of charts and plots.
+- **TensorFlow** - Framework for numerical computation and machine learning, provides various tools for building and deploying Deep learning models.
 
 ---
 
