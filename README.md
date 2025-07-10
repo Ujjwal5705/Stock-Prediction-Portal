@@ -113,3 +113,27 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 
 > Note:- There are two types of RNN. Vanilla RNN and LSTM RNN. The only difference between them is that LSTM model has super powerfull memory capability as compared to Vanilla.
 > It can remember very old events and patterns of a stock, that's why LSTM is the best fit for this project.
+
+<h2 align="center">
+  Approach used for Prediction
+</h2>
+
+### Step 1: Data Collection
+
+- Import the required libraries: `pandas`, `numpy`, `matplotlib`, `yfinance`, and `datetime`.
+- Determine the current time.
+- Set the end date as the current time
+- Set the start date as 10 years before the current time.
+- Download historical stock data using `yf.download(ticker, start, end)`.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/MpqQmpm0/Screenshot-2025-07-10-at-12-26-44-AM.png" height="300" width="400"><img/>
+</p>
+
+### Step 2: Data Exploration & Visualization
+- Used `reset_index` to get each day as a separate row with date as a column.
+- Visualized the stock prices using `plt.plot()` from the `matplotlib` library.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/cJ7k5Hps/Screenshot-2025-07-10-at-12-34-21-AM.png" height="300" width="400"><img/>
+</p>
