@@ -137,3 +137,22 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 <p align="center">
   <img align="center" src="https://i.postimg.cc/cJ7k5Hps/Screenshot-2025-07-10-at-12-34-21-AM.png" height="300" width="400"><img/>
 </p>
+
+### Step 3: Feature Engineering
+- Calculated the 100-day moving average.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/x8x9K3vh/Screenshot-2025-07-10-at-3-30-13-PM.png" height="300" width="400"><img/>
+</p>
+
+- Calculated the 200-day moving average.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/MGMtx63Q/Screenshot-2025-07-10-at-3-30-30-PM.png" height="300" width="400"><img/>
+</p>
+
+- Computed the percentage change in consecutive day closing prices.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/1XJDw2YS/Screenshot-2025-07-10-at-3-30-47-PM.png" height="300" width="400"><img/>
+</p>
