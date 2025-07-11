@@ -101,13 +101,13 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 - **FeedForward neural networks (FNNs) :-** In this neural network, data moves only in one direction i.e. the direction of flow of data doesn't matter. It has no memory. Example: Image Recognition.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/C1hsPXJR/Screenshot-2025-07-07-at-5-43-33-PM.png" height="200" width="300"><img/>
+  <img align="center" src="https://i.postimg.cc/C1hsPXJR/Screenshot-2025-07-07-at-5-43-33-PM.png" height="400" width="500"><img/>
 </p>
 
 - **Recurrent neural networks (RNNs) :-** RNNs are such type of neural networks in which sequence of data flow matters. It is more sophisticated version of FNNs and has built in short-term memory. Stock market data is time-series i.e. a particular event is tagged with a time and that flow of data matters.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/cCgW3Dpz/Screenshot-2025-07-07-at-6-02-24-PM.png" height="200" width="300"><img/>
+  <img align="center" src="https://i.postimg.cc/cCgW3Dpz/Screenshot-2025-07-07-at-6-02-24-PM.png" height="400" width="500"><img/>
 </p>
 
 - **Convolutional neural networks (CNNs) :-** CNNs are mostly used for visual data like images and videos.
@@ -129,7 +129,7 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 - Download historical stock data using `yf.download(ticker, start, end)`.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/MpqQmpm0/Screenshot-2025-07-10-at-12-26-44-AM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/MpqQmpm0/Screenshot-2025-07-10-at-12-26-44-AM.png" height="400" width="500"><img/>
 </p>
 
 ### Step 2: Data Exploration & Visualization
@@ -137,26 +137,26 @@ Regression is a type of machine learning in which the ultimate goal is to predic
 - Visualized the stock prices using `plt.plot()` from the `matplotlib` library.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/cJ7k5Hps/Screenshot-2025-07-10-at-12-34-21-AM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/cJ7k5Hps/Screenshot-2025-07-10-at-12-34-21-AM.png" height="400" width="500"><img/>
 </p>
 
 ### Step 3: Feature Engineering
 - Calculated the 100-day moving average.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/x8x9K3vh/Screenshot-2025-07-10-at-3-30-13-PM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/x8x9K3vh/Screenshot-2025-07-10-at-3-30-13-PM.png" height="400" width="500"><img/>
 </p>
 
 - Calculated the 200-day moving average.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/MGMtx63Q/Screenshot-2025-07-10-at-3-30-30-PM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/MGMtx63Q/Screenshot-2025-07-10-at-3-30-30-PM.png" height="400" width="500"><img/>
 </p>
 
 - Computed the percentage change in consecutive day closing prices.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/1XJDw2YS/Screenshot-2025-07-10-at-3-30-47-PM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/1XJDw2YS/Screenshot-2025-07-10-at-3-30-47-PM.png" height="400" width="500"><img/>
 </p>
 
 ### Step 4: Data Preprocessing
@@ -204,11 +204,11 @@ Dense Layer (1 neuron - Final Prediction)
 - Finally, I started the training process taking `x_train` datasets as input and `y_train` as output with 50 repetitions.
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/28ZDvgwY/Screenshot-2025-07-11-at-12-09-28-PM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/28ZDvgwY/Screenshot-2025-07-11-at-12-09-28-PM.png" height="400" width="500"><img/>
 </p>
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/gjB3Wn7C/Screenshot-2025-07-11-at-12-16-21-PM.png" height="300" width="400"><img/>
+  <img align="center" src="https://i.postimg.cc/gjB3Wn7C/Screenshot-2025-07-11-at-12-16-21-PM.png" height="400" width="500"><img/>
 </p>
 
 - Finally, model is saved and used for other stock price predictions.
@@ -216,3 +216,21 @@ Dense Layer (1 neuron - Final Prediction)
 ### Step 8: Preparing Test Data
 - Used the same scaling approach and sequence structure as the training data.
 - Created test sequences to evaluate model predictions.
+
+### Step 9: Making Predictions
+- Used `model.predict` to generate future stock price predictions.
+- Applied inverse transformation to convert scaled predictions and actual prices back to original values.
+- Plotted predicted vs actual prices for comparison.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/RZWRRWCJ/Screenshot-2025-07-12-at-12-18-22-AM.png" height="400" width="500"><img/>
+</p>
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/g2jMTMsJ/Screenshot-2025-07-12-at-12-18-38-AM.png" height="400" width="500"><img/>
+</p>
+
+### Step 9: Model Evaluation
+- Calculated Mean Squared Error (MSE) to measure average squared prediction error.
+- Calculated Root Mean Squared Error (RMSE) for interpretable error units.
+- Calculated R² Score to measure the proportion of variance explained by the model.
