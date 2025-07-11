@@ -229,3 +229,8 @@ Dense Layer (1 neuron - Final Prediction)
 <p align="center">
   <img align="center" src="https://i.postimg.cc/g2jMTMsJ/Screenshot-2025-07-12-at-12-18-38-AM.png" height="400" width="500"><img/>
 </p>
+
+### Step 9: Model Evaluation
+- Calculated Mean Squared Error (MSE) to measure average squared prediction error.
+- Calculated Root Mean Squared Error (RMSE) for interpretable error units.
+- Calculated R² Score to measure the proportion of variance explained by the model.
