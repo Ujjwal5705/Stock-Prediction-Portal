@@ -210,3 +210,5 @@ Dense Layer (1 neuron - Final Prediction)
 <p align="center">
   <img align="center" src="https://i.postimg.cc/gjB3Wn7C/Screenshot-2025-07-11-at-12-16-21-PM.png" height="300" width="400"><img/>
 </p>
+
+- Finally, model is saved and used for other stock price predictions.
