@@ -212,3 +212,7 @@ Dense Layer (1 neuron - Final Prediction)
 </p>
 
 - Finally, model is saved and used for other stock price predictions.
+
+### Step 8: Preparing Test Data
+- Used the same scaling approach and sequence structure as the training data.
+- Created test sequences to evaluate model predictions.
