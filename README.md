@@ -174,3 +174,39 @@ scaling helps the model learn more effectively and accurately.
 - Created `x_train` and `y_train` arrays.
 - Stored sequences of 100 consecutive values from the `data_training_array` in `x_train`.
 - Stored the corresponding result prices in `y_train`.
+
+### Step 6: Model Building
+
+```
+Input Layer (100 timesteps, 1 feature per timestep)
+        │
+        ▼
+LSTM Layer (128 units, tanh activation, return_sequences=True)
+        │
+        ▼
+LSTM Layer (64 units)
+        │
+        ▼
+Dense Layer (25 neurons)
+        │
+        ▼
+Dense Layer (1 neuron - Final Prediction)
+```
+
+- The Input Layer inputs 100 close prices into the network.
+- First LSTM layer further process the data fed to the layer and return outputs a sequence of shape(100, 128)
+- Second LSTM layer compresses the 128 outputs recieved from the previous layer to 64
+- Then this output goes into a Dense layer of 25 neurons which learns the complex patterns.
+- Finally the last Dense layer output a single Predicted Stock Price.
+
+### Step 7: Model Training
+- First step is to compile the model and set the optimizer with correct loss function. In this case, I used `adam` and `mean_squared_error`.
+- Finally, I started the training process taking `x_train` datasets as input and `y_train` as output with 50 repetitions.
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/28ZDvgwY/Screenshot-2025-07-11-at-12-09-28-PM.png" height="300" width="400"><img/>
+</p>
+
+<p align="center">
+  <img align="center" src="https://i.postimg.cc/gjB3Wn7C/Screenshot-2025-07-11-at-12-16-21-PM.png" height="300" width="400"><img/>
+</p>
