@@ -22,7 +22,7 @@ These are key technical indicators widely used by traders and financial analysts
 - **NumPy** - NumPy is a python library that can perform mathematical and statistical operations on large numerical data.
 - **Matplotlib** - Matplotlib is a python library, primarily designed to visualise data in the form of charts and plots.
 - **TensorFlow** - Framework for numerical computation and machine learning, provides various tools for building and deploying Deep learning models.
-
+- **Miniconda** - Used to create environment to install all the required libraries for jupyter notebook.
 ---
 
 > Important Disclaimer: Understanding my Prediction Approach
