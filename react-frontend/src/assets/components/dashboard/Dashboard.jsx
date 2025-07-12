@@ -17,7 +17,14 @@ const Dashboard = () => {
     }, [])
 
   return (
-    <div className='container text-light'>{data}</div>
+    <div className="container mb-5">
+        <div className="col-md-6 mx-auto">
+            <form action="">
+                <input className='form-control mb-3' type="text" placeholder='Select Stock Ticker'/>
+                <button type="button" className='btn btn-info'>See Prediction</button>
+            </form>
+        </div>
+    </div>
   )
 }
 
