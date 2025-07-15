@@ -32,7 +32,7 @@ class StockPredictionAPIView(APIView):
 
             # Generate Basic Plot
             plt.switch_backend('AGG')
-            plt.figure(figsize=(12, 5))
+            plt.figure(figsize=(9, 5))
             plt.plot(df.Close, label='Closing Price')
             plt.title(ticker)
             plt.xlabel('Days')
@@ -44,7 +44,9 @@ class StockPredictionAPIView(APIView):
             image_path = os.path.join(settings.MEDIA_ROOT, image_name)
             plt.savefig(image_path)
             plt.close()
+
             image_url = settings.MEDIA_URL + image_name
-            print(image_url)
-            
-            return Response('Success')
+            return Response({
+                'Success': 'Success',
+                'plot': image_url,
+            })

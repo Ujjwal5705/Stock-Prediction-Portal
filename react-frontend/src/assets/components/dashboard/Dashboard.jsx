@@ -9,6 +9,7 @@ const Dashboard = () => {
     const [ticker, setTicker] = useState('')
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+    const [plot, setPlot] = useState()
 
     useEffect(() => {
         const fetchProtectedData = async () => {
@@ -28,11 +29,11 @@ const Dashboard = () => {
         try{
             const response = await axiosInstance.post('/predict/', {'ticker': ticker})
             console.log(response.data)
+            setPlot(response.data.plot)
             if(response.data.error){
                 setError(response.data.error)
             }
         }catch(error){
-            setInvalid(true)
             console.log(error)
         }finally{
             setLoading(false)
@@ -49,6 +50,9 @@ const Dashboard = () => {
                 <input className='form-control mb-3' type="text" placeholder='Select Stock Ticker' onChange={(e) => setTicker(e.target.value)} required/>
                 {!loading ? (<button type='submit' className='btn btn-info'>See Prediction</button>) : (<button type='submit' className='btn btn-info' disabled><FontAwesomeIcon icon={faSpinner} spin/>Please wait...</button>)}
             </form>
+        </div>
+        <div className='text-center mt-4'>
+            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot} alt="Stock Closing Price" /> }
         </div>
     </div>
   )
