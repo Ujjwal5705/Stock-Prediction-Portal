@@ -12,7 +12,8 @@ const Dashboard = () => {
     const [plot, setPlot] = useState()
     const [plot100, setPlot100] = useState()
     const [plot200, setPlot200] = useState()
-
+    const [plotPct, setplotPct] = useState()
+    const [prediction, setPrediction] = useState()
 
     useEffect(() => {
         const fetchProtectedData = async () => {
@@ -35,6 +36,8 @@ const Dashboard = () => {
             setPlot(response.data.plot)
             setPlot100(response.data.plot_100)
             setPlot200(response.data.plot_200)
+            setplotPct(response.data.plot_pct)
+            setPrediction(response.data.prediction)
             if(response.data.error){
                 setError(response.data.error)
             }
@@ -67,6 +70,13 @@ const Dashboard = () => {
         </div>
         <div className='text-center mt-4'>
             {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot200} alt="200 DMA" /> }
+        </div>
+        <div className='text-center mt-4 mb-4'>
+            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plotPct} alt="200 DMA" /> }
+        </div>
+        {plot && <h2 className='text-center'><hr />Prediction <hr /></h2>}
+        <div className='text-center mt-4'>
+            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + prediction} alt="200 DMA" /> }
         </div>
     </div>
   )
