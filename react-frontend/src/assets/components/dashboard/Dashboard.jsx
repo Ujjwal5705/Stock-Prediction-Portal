@@ -11,6 +11,8 @@ const Dashboard = () => {
     const [error, setError] = useState('')
     const [plot, setPlot] = useState()
     const [plot100, setPlot100] = useState()
+    const [plot200, setPlot200] = useState()
+
 
     useEffect(() => {
         const fetchProtectedData = async () => {
@@ -32,6 +34,7 @@ const Dashboard = () => {
             console.log(response.data)
             setPlot(response.data.plot)
             setPlot100(response.data.plot_100)
+            setPlot200(response.data.plot_200)
             if(response.data.error){
                 setError(response.data.error)
             }
@@ -60,7 +63,10 @@ const Dashboard = () => {
             {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot} alt="Stock Closing Price" /> }
         </div>
         <div className='text-center mt-4'>
-            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot100} alt="Stock Closing Price" /> }
+            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot100} alt="100 DMA" /> }
+        </div>
+        <div className='text-center mt-4'>
+            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot200} alt="200 DMA" /> }
         </div>
     </div>
   )
