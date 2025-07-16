@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import axiosInstance from '../../axiosInstance'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
@@ -14,6 +14,9 @@ const Dashboard = () => {
     const [plot200, setPlot200] = useState()
     const [plotPct, setplotPct] = useState()
     const [prediction, setPrediction] = useState()
+    const [mse, setMSE] = useState()
+    const [rmse, setRMSE] = useState()
+    const [r2_score, setR2_score] = useState()
 
     useEffect(() => {
         const fetchProtectedData = async () => {
@@ -38,6 +41,9 @@ const Dashboard = () => {
             setPlot200(response.data.plot_200)
             setplotPct(response.data.plot_pct)
             setPrediction(response.data.prediction)
+            setMSE(response.data.mse)
+            setRMSE(response.data.rmse)
+            setR2_score(response.data.r2)
             if(response.data.error){
                 setError(response.data.error)
             }
@@ -74,10 +80,22 @@ const Dashboard = () => {
         <div className='text-center mt-4 mb-4'>
             {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plotPct} alt="200 DMA" /> }
         </div>
-        {plot && <h2 className='text-center'><hr />Prediction <hr /></h2>}
+        {plot && <h2 className='text-light text-center'><hr />Prediction <hr /></h2>}
         <div className='text-center mt-4'>
             {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + prediction} alt="200 DMA" /> }
         </div>
+
+        {plot && 
+        <div className='text-light mt-4'>
+            <h3 className='text-center'>Model Evaluation</h3>
+            <hr />
+            <big>Mean Squared Error: {mse}</big>
+            <hr />
+            <big>Root Mean Squared Error: {rmse}</big>
+            <hr />
+            <big>R-Squared: {r2_score}</big>
+        </div>
+        }
     </div>
   )
 }

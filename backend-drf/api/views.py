@@ -118,7 +118,7 @@ class StockPredictionAPIView(APIView):
             y_predicted = pd.DataFrame(y_predicted)
             y_test = pd.DataFrame(y_test)
 
-            #Making Predictions
+            # Making Predictions
             plt.figure(figsize=(9, 5))
             plt.plot(y_test, 'r', label='Original Price')
             plt.plot(y_predicted, 'g', label='Predicted Price')
@@ -127,9 +127,15 @@ class StockPredictionAPIView(APIView):
             plt.ylabel('Price')
             plt.legend()
 
-            #Save predicted plot
+            # Save predicted plot
             image_prediction_name = f'{ticker}_prediction.png'
             image_prediction_url = save_plot(image_prediction_name)
+
+            # Model Evaluation
+            # MSE, RMSE and r2_score
+            mse = mean_squared_error(y_test, y_predicted)
+            rmse = np.sqrt(mse)
+            r2 = r2_score(y_test, y_predicted)
 
             return Response({
                 'Success': 'Success',
@@ -138,7 +144,7 @@ class StockPredictionAPIView(APIView):
                 'plot_200': plot_200_url,
                 'plot_pct': plot_pct_url,
                 'prediction': image_prediction_url,
-                # 'mse': mse,
-                # 'rmse': rmse,
-                # 'r2': r2,
+                'mse': mse,
+                'rmse': rmse,
+                'r2': r2,
             })
