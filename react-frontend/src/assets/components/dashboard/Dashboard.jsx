@@ -10,6 +10,7 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const [plot, setPlot] = useState()
+    const [plot100, setPlot100] = useState()
 
     useEffect(() => {
         const fetchProtectedData = async () => {
@@ -30,8 +31,12 @@ const Dashboard = () => {
             const response = await axiosInstance.post('/predict/', {'ticker': ticker})
             console.log(response.data)
             setPlot(response.data.plot)
+            setPlot100(response.data.plot_100)
             if(response.data.error){
                 setError(response.data.error)
+            }
+            else{
+                setError()
             }
         }catch(error){
             console.log(error)
@@ -53,6 +58,9 @@ const Dashboard = () => {
         </div>
         <div className='text-center mt-4'>
             {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot} alt="Stock Closing Price" /> }
+        </div>
+        <div className='text-center mt-4'>
+            {plot && <img style={{maxWidth : '100%'}} src={import.meta.env.VITE_BACKEND_ROOT_URL + plot100} alt="Stock Closing Price" /> }
         </div>
     </div>
   )

@@ -4,12 +4,12 @@ from .serializers import StockPredictionSerializer
 from rest_framework.response import Response
 from rest_framework import status
 import matplotlib.pyplot as plt
+from .utils import save_plot
 from datetime import datetime
-from django.conf import settings
 import yfinance as yf
 import pandas as pd
 import numpy as np
-import os
+
 
 # Create your views here.
 
@@ -28,7 +28,6 @@ class StockPredictionAPIView(APIView):
                 return Response({'error': 'No data found for the given ticker', 'status': status.HTTP_404_NOT_FOUND})
             
             df.reset_index(inplace=True)
-            print(df)
 
             # Generate Basic Plot
             plt.switch_backend('AGG')
@@ -41,12 +40,25 @@ class StockPredictionAPIView(APIView):
 
             # Save Plot
             image_name = f'{ticker}_plot.png'
-            image_path = os.path.join(settings.MEDIA_ROOT, image_name)
-            plt.savefig(image_path)
-            plt.close()
+            plot_url = save_plot(image_name)
 
-            image_url = settings.MEDIA_URL + image_name
+            # 100 days moving average
+            df['MA_100'] = df['Close'].rolling(100).mean()
+            plt.switch_backend('AGG')
+            plt.figure(figsize=(9, 5))
+            plt.plot(df.MA_100, 'r', label='100 days moving average')
+            plt.plot(df.Close, label='Closing Price')
+            plt.title(ticker)
+            plt.xlabel('Days')
+            plt.ylabel('Price')
+            plt.legend()
+            
+            # Save Plot
+            image_100_name = f'{ticker}_100_dma.png'
+            plot_100_url = save_plot(image_100_name)
+
             return Response({
                 'Success': 'Success',
-                'plot': image_url,
+                'plot': plot_url,
+                'plot_100': plot_100_url,
             })
