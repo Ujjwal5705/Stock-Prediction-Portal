@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/ujjwalsharma/Desktop/Stock prediction portal/env10/bin/python3.10" "$0" "$@"
+'''exec' "/Users/ujjwalsharma/Desktop/Stock prediction portal/env10/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
